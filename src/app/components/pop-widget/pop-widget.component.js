@@ -4,15 +4,27 @@
 
 		var app = angular.module('dynaPop');
 
-		function PopWidgetController() {
+		function fetchTopics($http) {
+			return $http.get('./topics.json')
+							.then(function(response) {
+								return response.data;
+							});
+		}
+
+		function PopWidgetController($http) {
 			var model = this;
 
 			model.isSearchFormDisplayed = false;
 
-			model.title = 'Pop Widget Component';
+			model.title = 'Recommended Topics';
+			model.query = 'Retirement';
 
 			model.$onInit = function() {
-				console.log('POP widget Initiated!');
+				fetchTopics($http)
+					.then(function(data) {
+						console.log('onInit data', data);
+						model.topics = data;
+					});
 			};
 
 			model.openPop = function() {
@@ -24,7 +36,7 @@
 		app.component('popWidget', {
 			templateUrl: 'app/components/pop-widget/pop-widget.component.html',
 			controllerAs: 'model',
-			controller: [PopWidgetController]
+			controller: ['$http', PopWidgetController]
 		});
 
 })();

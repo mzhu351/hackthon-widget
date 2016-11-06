@@ -2,13 +2,21 @@
 
 	<div ng-show="model.isSearchFormDisplayed" class="pop-content-wrap">
 		<div class="top-wrap">
-			<input type="text" placeholder="What can we help you with?">
+			<input type="text" placeholder="What can we help you with?" ng-model="model.query">
 			<button href="#" class=" btn btn-primary search-form-submit">
 				Search
 			</button>
 		</div>
 
-		<topic-list></topic-list>
+		<!--<topic-list></topic-list>-->
+		<div>
+			<h4>{{model.title}}</h4>
+			<ul class="topic-list">
+				<li ng-repeat="topic in model.topics | filter: model.query | limitTo: 5">
+					<a ng-href="{{topic.url}}">{{topic.title}}</a>
+				</li>
+			</ul>
+		</div>
 
 	</div>
 
