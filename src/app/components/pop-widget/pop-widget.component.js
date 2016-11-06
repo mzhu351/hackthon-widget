@@ -2,7 +2,7 @@
 
 		'use strict';
 
-		var module = angular.module('dynaPop');
+		var app = angular.module('dynaPop');
 
 		function PopWidgetController() {
 			var model = this;
@@ -10,11 +10,15 @@
 			model.title = 'Pop Widget Component';
 
 			model.$onInit = function() {
-				console,log('POP widget Initiated!');
+				console.log('POP widget Initiated!');
+			};
+
+			model.openPop = function() {
+				console.log('Pop is open!');
 			};
 		}
 
-		module.component('popWidget', {
+		app.component('popWidget', {
 			templateUrl: 'app/components/pop-widget/pop-widget.component.html',
 			controllerAs: 'model',
 			controller: [PopWidgetController]

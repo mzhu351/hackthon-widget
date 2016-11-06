@@ -1,0 +1,6 @@
+<h1>{{model.title}}</h1>
+<ul class="topic-list">
+	<li ng-repeat="topic in ctrl.topics">
+		<a ng-href="{{topic.url}}">topic: {{topic.text}}</a>
+	</li>
+</ul>
