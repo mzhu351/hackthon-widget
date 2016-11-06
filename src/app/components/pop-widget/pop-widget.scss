@@ -1,0 +1,26 @@
+#pop-widget-wrap {
+	display: block;
+	width: 300px;
+	position: fixed;
+  bottom: 2%;
+  right: 1%;
+  z-index: 1030;
+  text-align: right;
+}
+.pop-content-wrap {
+	border: 2px solid red;
+	background: #FFFFFF;
+	text-align: left;
+	padding: 20px;
+	.top-wrap {
+		input {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+}
+#pop-button {
+	font-size: 18px;
+	display: block;
+	margin: 20px;
+}

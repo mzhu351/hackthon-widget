@@ -7,6 +7,8 @@
 		function PopWidgetController() {
 			var model = this;
 
+			model.isSearchFormDisplayed = false;
+
 			model.title = 'Pop Widget Component';
 
 			model.$onInit = function() {
@@ -15,6 +17,7 @@
 
 			model.openPop = function() {
 				console.log('Pop is open!');
+				model.isSearchFormDisplayed = !model.isSearchFormDisplayed;
 			};
 		}
 

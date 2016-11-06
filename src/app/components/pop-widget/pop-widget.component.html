@@ -1,27 +1,18 @@
 <div id="pop-widget-wrap">
-	<a id="pop-button" href="javascript:void(0)" ng-click="model.openPop()">
-		<i class="fa fa-2x fa-commenting-o" aria-hidden="true"></i>
-	</a>
-	<div ng-if="!myVal">
+
+	<div ng-show="model.isSearchFormDisplayed" class="pop-content-wrap">
 		<div class="top-wrap">
 			<input type="text" placeholder="What can we help you with?">
-			<a href="#" class="search-form-submit">
-				<i class="fa fa-search" aria-hidden="true"></i>
-			</a>
+			<button href="#" class=" btn btn-primary search-form-submit">
+				Search
+			</button>
 		</div>
 
 		<topic-list></topic-list>
-		
-	</div>
-</div>
 
-<style type="text/css">
-	#pop-widget-wrap {
-		display: block;
-		width: 300px;
-		border: 2px solid #ddd;
-	}
-	#pop-button {
-		font-size: 32px;
-	}
-</style>
+	</div>
+
+	<a id="pop-button" href="javascript:void(0)" ng-click="model.openPop()">
+		<i class="fa fa-2x fa-commenting-o" aria-hidden="true"></i>
+	</a>
+</div>
