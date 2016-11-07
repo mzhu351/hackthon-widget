@@ -1,7 +1,5 @@
 <!-- rate if this page helped you -->
-<span ng-repeat="entry in model.entries track by $index">
-	<span
-		ng-click="model.setRating()"
-		class="fa {{entry}}"
-	></span>
+<span ng-repeat="star in model.stars track by $index"
+			ng-click="model.toggle($index)">
+	<i class="fa {{star}}"></i>
 </span>

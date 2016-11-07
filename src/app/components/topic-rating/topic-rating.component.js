@@ -3,15 +3,15 @@
 
 	var app = angular.module('dynaPop');
 
-	function buildEntries(value, max) {
-		var entries = [];
+	function updateStars(ratingValue, max) {
+		var stars = [];
 
 		for(var i = 1; i <= max; i++) {
-			var icon = i <= value ? 'fa-star' : 'fa-star-o';
-			entries.push(icon);
+			var icon = i <= ratingValue ? 'fa-star' : 'fa-star-o';
+			stars.push(icon);
 		}
-
-		return entries;
+console.log('in updateStar fn', stars);
+		return stars;
 	}
 
 	function TopicRatingController() {
@@ -21,19 +21,27 @@
 		if (!model.max) {
 			model.max = 5;
 		}
+		model.toggle = function(index) {
+			model.ratingValue = index +1;
+			console.log('ratingValue changes to ', model.ratingValue);
+		};
 
 		model.$onInit = function() {
-			console.log('in topic rating init max', model.max);
-			model.entries = buildEntries(model.value, model.max);
+			model.stars = updateStars(model.ratingValue, model.max);
 		//	console.log('in top rating init', model.entries);
 		};
+
+		model.$onChanges = function() {
+			model.stars = updateStars(model.ratingValue, model.max);
+		}
+
 	}
 
 	app.component('topicRating', {
 		templateUrl: 'app/components/topic-rating/topic-rating.component.html',
 		bindings: {
-			value: '<',
-			max: '<'
+			ratingValue: '=ngModel', //pass rating value
+			max: '=?' //optional (default is 5)
 		},
 	  controllerAs: 'model',
 		controller: [TopicRatingController]

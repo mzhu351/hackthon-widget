@@ -14,7 +14,7 @@
 						<a ng-click="model.openNewTab(topic.url)">{{topic.title}}</a>
 					</div>
 					<div class="col-xs-4">
-						<topic-rating value="topic.rating" max="5">
+						<topic-rating ng-model="topic.rating">
 						</topic-rating>
 					</div>
 				</li>
