@@ -10,11 +10,11 @@
 			var icon = i <= ratingValue ? 'fa-star' : 'fa-star-o';
 			stars.push(icon);
 		}
-console.log('in updateStar fn', stars);
+
 		return stars;
 	}
 
-	function TopicRatingController() {
+	function TopicRatingController($watch) {
 		var model = this;
 
 		// Define default status is 5 star available for rating
@@ -23,7 +23,7 @@ console.log('in updateStar fn', stars);
 		}
 		model.toggle = function(index) {
 			model.ratingValue = index +1;
-			console.log('ratingValue changes to ', model.ratingValue);
+			model.stars = updateStars(model.ratingValue, model.max);
 		};
 
 		model.$onInit = function() {
@@ -31,9 +31,6 @@ console.log('in updateStar fn', stars);
 		//	console.log('in top rating init', model.entries);
 		};
 
-		model.$onChanges = function() {
-			model.stars = updateStars(model.ratingValue, model.max);
-		}
 
 	}
 
