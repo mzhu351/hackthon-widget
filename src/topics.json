@@ -3,48 +3,54 @@
 		"id": 1,
 		"title": "Retirement Income",
 		"rating": 2,
-		"url": "www.google.com"
+		"url": "http://www.google.com"
 	},
 	{
 		"id": 2,
-		"title": "Savings",
+		"title": "Savings Calculation",
 		"rating": 3,
-		"url": "www.yahoo.com"
+		"url": "http://www.yahoo.com"
 	},
 	{
 		"id": 3,
-		"title": "Risk",
+		"title": "Risk forecast",
 		"rating": 4,
-		"url": "www.egghead.io"
+		"url": "http://www.egghead.io"
 	},
 	{
 		"id": 4,
-		"title": "Investment",
+		"title": "Investment forecast",
 		"rating": 5,
-		"url": "www.angular.io"
+		"url": "http://www.angular.io"
 	},
 	{
 		"id": 5,
-		"title": "Goal",
+		"title": "Goal Setting for Retirement",
 		"rating": 2,
-		"url": "www.google.com"
+		"url": "http://www.google.com"
 	},
 	{
 		"id": 6,
 		"title": "Health Care",
 		"rating": 3,
-		"url": "www.yahoo.com"
+		"url": "http://www.yahoo.com"
 	},
 	{
 		"id": 7,
-		"title": "Education",
+		"title": "Education Expenses",
 		"rating": 4,
-		"url": "www.egghead.io"
+		"url": "http://www.egghead.io"
 	},
 	{
 		"id": 8,
-		"title": "Social Security",
+		"title": "Social Security Income Planner",
 		"rating": 5,
-		"url": "www.angular.io"
+		"url": "http://www.angular.io"
+	},
+	{
+		"id": 9,
+		"title": "Expenses Calculation",
+		"rating": 5,
+		"url": "http://www.angular.io"
 	}
 ]

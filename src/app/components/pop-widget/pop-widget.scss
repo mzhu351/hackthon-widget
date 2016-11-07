@@ -1,6 +1,6 @@
 #pop-widget-wrap {
 	display: block;
-	width: 300px;
+	width: 375px;
 	position: fixed;
   bottom: 2%;
   right: 1%;
@@ -12,15 +12,42 @@
 	background: #FFFFFF;
 	text-align: left;
 	padding: 20px;
+	transition: all 0.1s ease;
+
 	.top-wrap {
 		input {
 			width: 100%;
 			margin-bottom: 10px;
 		}
+		&.form-group {
+			margin-bottom: 0;
+			line-height: 1.2;
+		}
+	}
+	h4.recom-title {
+		margin-top: 0;
+	}
+
+	ul.topic-list {
+		-webkit-padding-start: 0px;
+		list-style-type: none;
 	}
 }
 #pop-button {
 	font-size: 18px;
 	display: block;
 	margin: 20px;
+	.fa.fa-commenting {
+		transition: all 0.3s ease;
+	}
+}
+
+#filtersubmit {
+    position: relative;
+    z-index: 1;
+    left: 300px;
+    top: -35px;
+    color: #7B7B7B;
+    cursor:pointer;
+    width: 0;
 }

@@ -11,13 +11,14 @@
 							});
 		}
 
-		function PopWidgetController($http) {
+		function PopWidgetController($http, $window) {
 			var model = this;
+
+			model.topics = [];
 
 			model.isSearchFormDisplayed = false;
 
-			model.title = 'Recommended Topics';
-			model.query = 'Retirement';
+			model.title = 'Popular Topics';
 
 			model.$onInit = function() {
 				fetchTopics($http)
@@ -28,15 +29,22 @@
 			};
 
 			model.openPop = function() {
-				console.log('Pop is open!');
 				model.isSearchFormDisplayed = !model.isSearchFormDisplayed;
 			};
+
+			model.openNewTab = function(url) {
+				$window.open(url, '_blank');
+			};
+
+
 		}
+
 
 		app.component('popWidget', {
 			templateUrl: 'app/components/pop-widget/pop-widget.component.html',
 			controllerAs: 'model',
-			controller: ['$http', PopWidgetController]
+			controller: ['$http', '$window', PopWidgetController],
+			bindings: {}
 		});
 
 })();
