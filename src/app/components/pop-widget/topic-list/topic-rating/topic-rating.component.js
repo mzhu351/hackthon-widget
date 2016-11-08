@@ -14,7 +14,7 @@
 		return stars;
 	}
 
-	function TopicRatingController($watch) {
+	function TopicRatingController() {
 		var model = this;
 
 		// Define default status is 5 star available for rating
