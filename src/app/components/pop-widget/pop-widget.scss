@@ -11,8 +11,8 @@
 	border: 2px solid red;
 	background: #FFFFFF;
 	text-align: left;
-	padding: 20px;
 	transition: all 0.1s ease;
+	margin-top: 40px;
 
 	.top-wrap {
 		input {
@@ -22,10 +22,21 @@
 		&.form-group {
 			margin-bottom: 0;
 			line-height: 1.2;
+			.form-control {
+				height: 44px;
+				font-size: 16px;
+				border: none;
+				border-radius: none;
+				border-bottom: 2px solid #ddd;
+			}
 		}
 	}
 	h4.recom-title {
 		margin-top: 0;
+	}
+
+	.widget-content {
+		padding: 0 20px 20px 20px;
 	}
 
 	ul.topic-list {
@@ -33,21 +44,34 @@
 		list-style-type: none;
 	}
 }
-#pop-button {
-	font-size: 18px;
-	display: block;
-	margin: 20px;
-	.fa.fa-commenting {
-		transition: all 0.3s ease;
+a#pop-button {
+	width:60px;
+  height:60px;
+  background-color:#06ce9f;
+  border-radius:100%;
+  line-height:60px;
+  text-align:center;
+  vertical-align:middle;
+  display:inline-block;
+
+	&:hover {
+		background-color: #01476b;
 	}
+	.fa-android {
+		line-height: inherit;
+		color: #fff;
+	}
+
 }
+
 
 #filtersubmit {
     position: relative;
     z-index: 1;
-    left: 300px;
-    top: -35px;
-    color: #7B7B7B;
+    left: 330px;
+    top: -40px;
+    color: #c9c9c9;
     cursor:pointer;
     width: 0;
+		font-size: 18px;
 }

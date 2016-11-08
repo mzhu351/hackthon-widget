@@ -35,7 +35,7 @@
 	}
 
 	app.component('topicRating', {
-		templateUrl: 'app/components/topic-rating/topic-rating.component.html',
+		templateUrl: 'app/components/pop-widget/topic-rating/topic-rating.component.html',
 		bindings: {
 			ratingValue: '=ngModel', //pass rating value
 			max: '=?' //optional (default is 5)
