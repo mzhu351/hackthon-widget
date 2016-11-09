@@ -16,6 +16,8 @@
 				model.isSearchFormDisplayed = !model.isSearchFormDisplayed;
 			};
 
+			model.actions = ['searchView', 'detailView', 'msgView'];
+			model.userAction = model.actions[0];
 
 		}
 

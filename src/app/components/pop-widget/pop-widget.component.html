@@ -1,17 +1,33 @@
 <div id="pop-widget-wrap">
 
 	<div ng-show="model.isSearchFormDisplayed" class="pop-content-wrap">
-		<topic-list></topic-list>
-		<ui-view></ui-view>
-		<widget-footer></widget-footer>
+		<div ng-switch on="model.userAction">
+
+			<div ng-switch-when="searchView">
+				<topic-list></topic-list>
+			</div>
+
+			<div ng-switch-when="detailView">
+				<topic-detail></topic-detail>
+				<widget-footer></widget-footer>
+			</div>
+
+			<div ng-switch-when="msgView">
+				<msg-view></msg-view>
+				<widget-footer></widget-footer>
+			</div>
+
+		</div>
+
+
 
 	</div>
 
 	<a id="pop-button" href="javascript:void(0)"
 		ng-click="model.openPop()"
 		ng-class="{'open': model.isSearchFormDisplayed }">
-		<i class="fa fa-3x fa fa-android"
-				ng-class="{'fa-rotate-180': model.isSearchFormDisplayed }"
+		<i class="fa fa-2x fa"
+				ng-class="{'fa-times': model.isSearchFormDisplayed, 'fa-android': !model.isSearchFormDisplayed}"
 				aria-hidden="true"></i>
 	</a>
 </div>
