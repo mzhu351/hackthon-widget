@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('dynaPop', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap'])
+    .module('dynaPop', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'popOver'])
     .config(config);
 
   function config($stateProvider, $urlRouterProvider) {

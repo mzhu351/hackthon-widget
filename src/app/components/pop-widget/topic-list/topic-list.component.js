@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	var app = angular.module('dynaPop');
+	var app = angular.module('popOver');
 
 	function fetchTopics($http) {
 		return $http.get('./topics.json')

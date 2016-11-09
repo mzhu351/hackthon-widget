@@ -2,7 +2,7 @@
 
 		'use strict';
 
-		var app = angular.module('dynaPop');
+		var app = angular.module('popOver');
 
 		function PopWidgetController() {
 			var model = this;
@@ -18,7 +18,6 @@
 
 
 		}
-
 
 		app.component('popWidget', {
 			templateUrl: 'app/components/pop-widget/pop-widget.component.html',
